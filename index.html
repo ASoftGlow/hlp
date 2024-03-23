@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Line Picker</title>
+    <meta property="og:title" content="Line Picker App">
+    <meta property="og:image" content="imgs/puck.svg">
+    <meta property="og:image:alt" content="A gray hockey pock">
+    <meta property="og:description" content="Simple tool for creating hockey lineups.">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="author" content="ASoftGlow">
+    <meta name="creator" content="ASoftGlow">
+    <meta name="description" content="Simple tool for creating hockey lineups.">
+    <meta name="keywords" content="hockey,app,free,picker,chooser,creator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#8676c0">
+    <link rel="manifest" href="index.webmanifest">
+    <link rel="icon" href="imgs/puck.svg">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <button disabled>Positions</button>
+        <button>Display</button>
+        <a href="practice.html"><button>Practice</button></a>
+    </nav>
+    <main>
+        <section id="edit-page" style="display: block;">
+            <div id="goalie" title="Goalie">
+                <label>Goalie</label>
+                <select></select>
+            </div>
+            <div class="cont">
+                <div id="lw" title="Left Winger">
+                    <label>LW</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                </div>
+                <div id="c" title="Center">
+                    <label>C</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                </div>
+                <div id="rw" title="Right Winger">
+                    <label>RW</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                </div>
+            </div>
+            <div class="cont">
+                <div>
+                    <div id="rost-cont">
+                        <label id="l-roster">Roster</label>
+                        <div role="list" aria-labelledby="l-roster" id="roster"></div>
+                    </div>
+                </div>
+                <div>
+                    <div id="ld" title="Left Defense">
+                        <label>LD</label>
+                        <select></select>
+                        <select></select>
+                        <select></select>
+                    </div>
+                    <div class="control">
+                        <button id="add-btn">Add player</button>
+                        <button id="remove-btn">Remove player</button>
+                        <hr width="100%">
+                        <div class="control-vert">
+                            <button id="reset-btn">Reset</button>
+                            <button id="remove-all-btn">Delete all</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="rd" title="Right Defense">
+                        <label>RD</label>
+                        <select></select>
+                        <select></select>
+                        <select></select>
+                    </div>
+                    <div class="control">
+                        <label style="font-weight: initial; text-align: initial; color: var(--color-sec);">Import players from text file, one per line:</label>
+                        <input type="file" id="import-input" accept=".txt" title="Import">
+                        <button id="export-btn">Export</button>
+                        <a id="export-input" download="players.txt" style="display: none;" aria-hidden="true"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="cont">
+                <div id="missing" title="Missing">
+                    <label>Missing</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                </div>
+            </div>
+        </section>
+        <section id="display-page">
+            <p id="l-forwards">Forwards</p>
+            <div class="grid" id="o-forwards" aria-labelledby="l-forwards">
+                <span role="list" aria-label="left"></span>
+                <span role="list" aria-label="right"></span>
+                <span role="list" aria-label="center"></span>
+            </div>
+            <p id="l-defense">Defense</p>
+            <div class="grid" id="o-defense" aria-labelledby="l-defense">
+                <span role="list" aria-label="left"></span>
+                <span role="list" aria-label="right"></span>
+            </div>
+            <p id="l-goalie">Goalie</p>
+            <div class="grid" id="o-goalie" aria-labelledby="l-goalie">
+                <span role="list" style="height: 1lh; margin-top: 0; margin-bottom: 1em;"></span>
+            </div>
+        </section>
+        <section id="loading-page">Loading...</section>
+    </main>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined')
+            navigator.serviceWorker.register('sw.js');
+    </script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

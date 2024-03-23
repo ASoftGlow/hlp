@@ -1,0 +1,149 @@
+main {
+    margin: 0 auto 2em auto;
+    max-width: 500px;
+    padding: 8px 4px;
+    border: 1px solid;
+    text-align: center;
+    overflow: auto;
+}
+
+main, button, input, select, label, ::file-selector-button {
+    font-family: system-ui, Tahoma, Verdana, sans-serif;
+}
+
+::file-selector-button {
+    font-size: initial;
+}
+
+input[type="file"] {
+    font-size: 0;
+}
+
+section {
+    display: none;
+}
+
+select {
+    width: 100%;
+    max-width: 150px;
+    height: 1.8lh;
+    margin-bottom: 6px;
+}
+
+label:not(.nop) {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+}
+
+.cont>* {
+    width: 100%;
+}
+
+.cont>div {
+    margin-top: 1em;
+}
+
+#roster {
+    background-color: #ff000012;
+    border: 1px solid;
+    height: 220px;
+    padding: 0.5em;
+    overflow: auto;
+    white-space: break-spaces;
+    max-width: 160px;
+}
+
+#rost-cont {
+    margin: 0 8px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    justify-content: center;
+}
+
+.grid span {
+    display: inline-block;
+    border: 1px solid;
+    width: 150px;
+    height: 3lh;
+    padding: 0.5em 0.25em;
+    white-space: pre-wrap;
+    position: relative;
+    margin-top: calc(0.5em + 6px);
+}
+
+.grid span::before {
+    content: attr(aria-label);
+    content: attr(aria-label) / "";
+    font-size: small;
+    position: absolute;
+    top: calc(-1.5em - 2px);
+    color: var(--color-sec);
+    left: 0;
+    right: 0;
+}
+
+#missing select:not(:last-child) {
+    margin-right: 12px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5em;
+    margin: 1em 8px 0 8px;
+}
+
+.control-vert {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em
+}
+
+:root {
+    --color-sec: #7a7a7a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-sec: #959595;
+    }
+}
+
+nav {
+    display: flex;
+    column-gap: 1em;
+    justify-content: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+nav>a>button {
+    text-decoration: inherit;
+    cursor: inherit;
+}
+
+hr {
+    margin: 4px;
+}
+
+#edit-page {
+    min-width: 375px;
+}
+
+#display-page p {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}

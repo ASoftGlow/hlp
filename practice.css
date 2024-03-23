@@ -1,0 +1,26 @@
+.grid span {
+    margin-top: 0;
+    height: auto;
+    min-height: 1em;
+}
+
+@media screen and (max-width: 400px) {
+    .cont {
+        padding-left: 50%;
+        flex-wrap: wrap;
+    }
+
+    #rost-cont-cont {
+        position: fixed;
+        left: 12px;
+        width: calc(50% - 12px);
+    }
+
+    #roster {
+        max-height: 80%;
+    }
+}
+
+#edit-page {
+    min-width: unset;
+}

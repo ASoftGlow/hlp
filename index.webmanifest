@@ -1,0 +1,45 @@
+{
+    "short_name": "Line Picker",
+    "name": "Hockey Line Picker",
+    "icons": [
+      {
+        "src": "/hlp/imgs/puck.svg",
+        "type": "image/svg+xml",
+        "sizes": "150x150",
+        "purpose": "any"
+      },
+      {
+        "src": "/hlp/imgs/puck192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any"
+      },
+      {
+        "src": "/hlp/imgs/puck512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any"
+      }
+    ],
+    "lang": "en",
+    "orientation": "natural",
+    "start_url": "/hlp/",
+    "background_color": "#8676c0",
+    "display": "standalone",
+    "theme_color": "#8676c0",
+    "description": "Simple tool for creating hockey lineups",
+    "screenshots": [
+      {
+        "src": "/hlp/imgs/sh1.png",
+        "type": "image/png",
+        "sizes": "540x720",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/hlp/imgs/sh2.png",
+        "type": "image/png",
+        "sizes": "1080x720",
+        "form_factor": "wide"
+      }
+    ]
+  }

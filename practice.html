@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Line Picker</title>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#8676c0">
+    <link rel="manifest" href="index.webmanifest">
+    <link rel="icon" href="imgs/puck.svg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="practice.css">
+</head>
+
+<body>
+    <nav>
+        <a href="."><button>Positions</button></a>
+        <button>Display</button>
+        <button disabled>Practice</button>
+    </nav>
+    <main>
+        <section id="edit-page" style="display: block;">
+            <div class="cont">
+                <div id="rost-cont-cont">
+                    <div id="rost-cont">
+                        <label id="l-roster">Roster</label>
+                        <div role="list" aria-labelledby="l-roster" id="roster"></div>
+                    </div>
+                    <div class="control">
+                        <button id="reset-btn">Reset</button>
+                    </div>
+                </div>
+                <div id="team0">
+                    <label>Team 1</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <label class="nop">Color:</label>
+                    <input aria-label="Team 1 Color" type="color">
+                </div>
+                <div id="team1">
+                    <label>Team 2</label>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <select></select>
+                    <label class="nop">Color:</label>
+                    <input aria-label="Team 2 Color" type="color">
+                </div>
+            </div>
+        </section>
+        <section id="display-page">
+            <div class="grid" style="margin-bottom: 1em;">
+                <div>
+                    <p>Team 1</p>
+                    <span id="o-team0"></span>
+                </div>
+                <div>
+                    <p>Team 2</p>
+                    <span id="o-team1"></span>
+                </div>
+            </div>
+        </section>
+        <section id="loading-page">Loading...</section>
+    </main>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined')
+            navigator.serviceWorker.register('sw.js');
+    </script>
+    <script type="module" src="practice.js"></script>
+</body>
+
+</html>
